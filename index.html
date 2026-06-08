@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Der Heinz-Lindner-Baum – Mammutbaum Karlsruhe | Sequoiadendron giganteum</title>
+  <meta name="description" content="Ein Riesenmammutbaum in Karlsruhe als lebendes Denkmal für Heinz Lindner (1934–2023), Maschinenbauingenieur am Rheinhafendampfkraftwerk Karlsruhe. Seit den 1990er Jahren gewachsen.">
+  <meta name="keywords" content="Heinz Lindner, Mammutbaum Karlsruhe, Sequoiadendron giganteum Karlsruhe, Rheinhafendampfkraftwerk Karlsruhe, Gedenkbaum Karlsruhe, Riesenmammutbaum">
+  <meta name="author" content="Familie Lindner">
+  <meta name="robots" content="index, follow">
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a3d2b">
+
+  <link rel="canonical" href="https://heinz-lindner-baum.de/">
+
+  <!-- Hreflang für mehrsprachiges SEO -->
+  <link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/">
+  <link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/">
+  <link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/">
+  <link rel="alternate" hreflang="x-default" href="https://heinz-lindner-baum.de/">
+
+  <!-- Open Graph (für schöne Vorschauen bei WhatsApp, Facebook etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://heinz-lindner-baum.de/">
+  <meta property="og:title" content="Der Heinz-Lindner-Baum – Mammutbaum Karlsruhe">
+  <meta property="og:description" content="Ein Riesenmammutbaum in Karlsruhe als lebendes Denkmal für Heinz Lindner (1934–2023), Maschinenbauingenieur am Rheinhafendampfkraftwerk Karlsruhe.">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Der Heinz-Lindner-Baum – Mammutbaum Karlsruhe">
+  <meta name="twitter:description" content="Ein Riesenmammutbaum als lebendes Denkmal für Heinz Lindner (1934–2023), Ingenieur am Rheinhafendampfkraftwerk Karlsruhe.">
+
+  <!-- Strukturierte Daten für Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandmarkOrFeature",
+    "name": "Der Heinz-Lindner-Baum",
+    "description": "Sequoiadendron giganteum (Riesenmammutbaum) in Karlsruhe, gepflanzt in den 1990er Jahren, benannt nach Heinz Lindner (1934–2023), Maschinenbauingenieur am Rheinhafendampfkraftwerk Karlsruhe.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karlsruhe",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "url": "https://heinz-lindner-baum.de/",
+    "subjectOf": {
+      "@type": "Person",
+      "name": "Heinz Lindner",
+      "birthDate": "1934",
+      "deathDate": "2023",
+      "jobTitle": "Maschinenbauingenieur",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Rheinhafendampfkraftwerk Karlsruhe"
+      }
+    }
+  }
+  </script>
+
+  <!-- Fonts lokal gehostet (kein Google-Server-Kontakt = DSGVO-konform) -->
+  <link rel="stylesheet" href="fonts/fonts.css">
+
+  <!-- Cookie Consent (muss vor AdSense geladen werden) -->
+  <script src="cookie-consent.js"></script>
+  <!-- Web Components: Navigation & Footer -->
+  <script src="nav.js"></script>
+  <script src="footer.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #0a3d2b;
+      --green-mid: #1D9E75;
+      --green-light: #E1F5EE;
+      --green-pale: #f0faf6;
+      --bark: #5c3d2e;
+      --bark-light: #f5ede8;
+      --text: #1a1a1a;
+      --text-muted: #5a5a5a;
+      --text-subtle: #8a8a8a;
+      --border: rgba(0,0,0,0.08);
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.75;
+    }
+
+    /* NAV – via Web Component (nav.js) */
+
+    /* HERO */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(29,158,117,0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #f8fdf9 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(29,158,117,0.04) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(92,61,46,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 500;
+      color: var(--green-dark);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      max-width: 700px;
+    }
+    .hero-sub {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--text-subtle);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .hero-tagline {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted);
+      max-width: 520px;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .hero-years {
+      display: inline-block;
+      border: 1px solid rgba(29,158,117,0.3);
+      color: var(--green-mid);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      padding: 6px 20px;
+      border-radius: 30px;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 400;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-subtle);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--green-mid), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section.full-width {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      max-width: 80px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      color: var(--green-dark);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+    p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      max-width: 640px;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* STATS BAND */
+    .stats-band {
+      background: var(--green-dark);
+      padding: 3rem 2rem;
+    }
+    .stats-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-item .val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--white);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .stat-item .lbl {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* CAREER BLOCK */
+    .career-block {
+      border-left: 2px solid var(--green-mid);
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      background: var(--green-pale);
+      border-radius: 0 8px 8px 0;
+    }
+    .career-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--green-dark);
+      margin-bottom: 0.5rem;
+    }
+    .career-block p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* QUOTE */
+    blockquote {
+      border-left: 2px solid var(--green-mid);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* IMPACT GRID */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+    .impact-cell {
+      background: var(--white);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+    }
+    .impact-cell .ic-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--green-dark);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .impact-cell .ic-lbl {
+      font-size: 12px;
+      color: var(--text-subtle);
+      line-height: 1.4;
+    }
+
+    /* BENEFIT LIST */
+    .benefit-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .benefit-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .benefit-list li:last-child { border-bottom: none; }
+    .benefit-list li strong {
+      color: var(--green-dark);
+      font-weight: 500;
+      font-style: normal;
+      display: block;
+      margin-bottom: 2px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+    }
+    .benefit-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-size: 14px;
+    }
+
+    /* WHY GRID */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+    .why-card {
+      background: var(--green-pale);
+      border: 1px solid rgba(29,158,117,0.15);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .why-card .wc-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      margin-bottom: 4px;
+    }
+    .why-card .wc-val {
+      font-size: 0.95rem;
+      color: var(--green-dark);
+      font-weight: 400;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* PHOTO */
+    .photo-placeholder {
+      border: 1px dashed rgba(29,158,117,0.3);
+      border-radius: 8px;
+      padding: 4rem 2rem;
+      text-align: center;
+      background: var(--green-pale);
+      color: var(--text-subtle);
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+    }
+    .photo-placeholder .ph-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.75rem;
+      opacity: 0.4;
+    }
+
+    /* PARALLEL BOX */
+    .parallel-box {
+      background: var(--bark-light);
+      border-left: 2px solid var(--bark);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--bark);
+      line-height: 1.7;
+    }
+
+    /* FOOTER – via Web Component (footer.js) */
+
+    /* DIVIDER */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--green-mid);
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 3rem 1.25rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <hlb-nav lang="de"></hlb-nav>
+
+  <header class="hero">
+    <p class="hero-eyebrow">Karlsruhe · Sequoiadendron giganteum</p>
+    <h1>Der Heinz-<br>Lindner-Baum</h1>
+    <p class="hero-sub">Mammutbaum · Karlsruhe · Baden-Württemberg</p>
+    <p class="hero-tagline">Ein Ingenieur, der Karlsruhe mit Strom versorgte –<br>ein Baum, der es für Jahrhunderte bewahrt.</p>
+    <span class="hero-years">Heinz Lindner · 1934 – 2023</span>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats-band" role="region" aria-label="Fakten zum Baum">
+    <div class="stats-inner">
+      <div class="stat-item"><span class="val">~1990er</span><span class="lbl">gepflanzt</span></div>
+      <div class="stat-item"><span class="val">30+ Jahre</span><span class="lbl">bereits gewachsen</span></div>
+      <div class="stat-item"><span class="val">bis 90 m</span><span class="lbl">mögliche Endhöhe</span></div>
+      <div class="stat-item"><span class="val">~3.000</span><span class="lbl">mögliche Lebensjahre</span></div>
+    </div>
+  </div>
+
+  <!-- GESCHICHTE -->
+  <section id="geschichte">
+    <p class="section-label">Die Geschichte</p>
+    <h2>Ein Leben für die Technik – ein Baum für die Ewigkeit</h2>
+
+    <p>Heinz Lindner wurde 1934 geboren und widmete sein Leben der Maschinenbautechnik. Als Ingenieur verstand er wie wenige andere, dass echte Qualität Zeit braucht – und dass die besten Konstruktionen jene sind, die Generationen überdauern.</p>
+
+    <div class="career-block">
+      <h3>Rheinhafendampfkraftwerk Karlsruhe</h3>
+      <p>Heinz Lindner arbeitete am Rheinhafendampfkraftwerk – einem der bedeutendsten Industriestandorte Karlsruhes. Als Maschinenbauingenieur sorgte er dafür, dass die Turbinen liefen, die Kessel Druck hielten und die Stadt zuverlässig mit Strom versorgt wurde. Jedes Licht, das in Karlsruhe leuchtete, hatte auch ein bisschen von seiner Handschrift.</p>
+    </div>
+
+    <blockquote>„Ein guter Ingenieur denkt nicht in Jahren – er denkt in Jahrzehnten."</blockquote>
+
+    <p>Schon in den 1990er Jahren wurde in seinem Garten in Karlsruhe ein Riesenmammutbaum gepflanzt – die größte Baumart der Erde. Während Heinz Lindner jahrzehntelang Maschinen am Laufen hielt und Karlsruhe mit Energie versorgte, wuchs dieser Baum still mit. Heute, nach seinem Tod im Jahr 2023, trägt er seinen Namen: der Heinz-Lindner-Baum.</p>
+
+    <div class="parallel-box">
+      Das Kraftwerk lieferte Energie für die Stadt. Der Baum tut es auf seine Weise ebenfalls – durch saubere Luft, Kühlung und Leben. Ein schönerer Übergang von einem Lebenswerk zum nächsten lässt sich kaum denken.
+    </div>
+  </section>
+
+  <!-- WIRKUNG -->
+  <section id="wirkung">
+    <p class="section-label">Stadtklima & Natur</p>
+    <h2>Was dieser Baum jeden Tag für Karlsruhe leistet</h2>
+
+    <p>Städte wie Karlsruhe werden durch den Klimawandel immer wärmer. Bäume sind dabei keine Dekoration – sie sind lebensnotwendige Infrastruktur. Ein ausgewachsener Mammutbaum leistet täglich das, wofür Ingenieure sonst Maschinen bauen müssten.</p>
+
+    <div class="impact-grid">
+      <div class="impact-cell"><span class="ic-val">bis –8 °C</span><span class="ic-lbl">Kühlung der Umgebungsluft durch Verdunstung</span></div>
+      <div class="impact-cell"><span class="ic-val">400 L</span><span class="ic-lbl">Wasser verdunstet ein großer Baum pro Tag</span></div>
+      <div class="impact-cell"><span class="ic-val">100 kg</span><span class="ic-lbl">CO₂ bindet ein Mammutbaum pro Jahr</span></div>
+      <div class="impact-cell"><span class="ic-val">500+</span><span class="ic-lbl">Insektenarten leben in und an Stadtbäumen</span></div>
+    </div>
+
+    <ul class="benefit-list">
+      <li>
+        <div class="benefit-icon">☀️</div>
+        <div><strong>Hitzeschutz</strong>Durch Beschattung und Verdunstung kühlen Bäume ihre Umgebung deutlich ab – besonders wertvoll in Hitzeperioden, die in Karlsruhe immer häufiger werden.</div>
+      </li>
+      <li>
+        <div class="benefit-icon">🌧️</div>
+        <div><strong>Regenwassermanagement</strong>Tiefe Wurzeln nehmen Regenwasser auf und geben es langsam wieder ab – das verhindert Überschwemmungen und entlastet die Kanalisation.</div>
+      </li>
+      <li>
+        <div class="benefit-icon">🔇</div>
+        <div><strong>Lärmschutz</strong>Dichte Baumkronen schlucken Schallwellen und machen städtische Wohngebiete spürbar ruhiger.</div>
+      </li>
+      <li>
+        <div class="benefit-icon">❤️</div>
+        <div><strong>Gesundheit & Wohlbefinden</strong>Menschen in der Nähe von Bäumen haben nachweislich niedrigeren Blutdruck, weniger Stress und erholen sich schneller.</div>
+      </li>
+      <li>
+        <div class="benefit-icon">🐦</div>
+        <div><strong>Lebensraum für Tiere</strong>Vögel, Insekten, Kleinsäuger – ein alter Baum ist ein ganzes Ökosystem. Der Heinz-Lindner-Baum wird mit zunehmendem Alter immer mehr Leben beherbergen.</div>
+      </li>
+    </ul>
+
+    <blockquote>Der Heinz-Lindner-Baum ist kein privates Denkmal. Er arbeitet jeden Tag für die Nachbarschaft, für das Stadtklima, für die Natur – still und unaufhörlich. Genau wie sein Namensgeber.</blockquote>
+  </section>
+
+  <!-- MAMMUTBAUM -->
+  <section id="mammutbaum">
+    <p class="section-label">Sequoiadendron giganteum</p>
+    <h2>Warum ein Riesenmammutbaum?</h2>
+
+    <p>Der Riesenmammutbaum ist kein gewöhnlicher Gartenbaum. Er ist das Größte, was die Natur an Lebewesen je hervorgebracht hat – und eines der langlebigsten. Eine Wahl, die für sich spricht.</p>
+
+    <div class="why-grid">
+      <div class="why-card"><div class="wc-label">Rekord</div><div class="wc-val">Größter Baum der Welt nach Volumen</div></div>
+      <div class="why-card"><div class="wc-label">Langlebigkeit</div><div class="wc-val">Bis zu 3.500 Jahre alt</div></div>
+      <div class="why-card"><div class="wc-label">Widerstandskraft</div><div class="wc-val">Feuerresistent durch meterdicke Rinde</div></div>
+      <div class="why-card"><div class="wc-label">Heimat</div><div class="wc-val">Sierra Nevada – und jetzt Karlsruhe</div></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <p>Der bekannteste Vertreter der Art, der <strong>General Sherman</strong> im Sequoia National Park in Kalifornien, ist rund 84 Meter hoch, wiegt schätzungsweise 1.385 Tonnen und ist über 2.000 Jahre alt. Er gilt als der größte lebende Organismus der Erde – gemessen am Holzvolumen.</p>
+
+    <p>Der Heinz-Lindner-Baum in Karlsruhe teilt seine Art mit diesem Rekordhalter. Mit etwas Geduld – und ein paar Jahrhunderten – wer weiß, was noch möglich ist.</p>
+  </section>
+
+  <!-- FOTOS -->
+  <section id="fotos">
+    <p class="section-label">Fotogalerie</p>
+    <h2>Der Baum im Lauf der Jahreszeiten</h2>
+    <p>Nach über 30 Jahren Wachstum ist der Heinz-Lindner-Baum bereits ein beeindruckender Anblick. Fotos folgen in Kürze.</p>
+    <div class="photo-placeholder">
+      <span class="ph-icon">📷</span>
+      Fotos werden hier ergänzt – der Baum wächst bereits seit über drei Jahrzehnten.
+    </div>
+  </section>
+
+  <hlb-footer lang="de"></hlb-footer>
+
+</body>
+</html>
