@@ -1,0 +1,20 @@
+# SSL-Zertifikate – niemals ins Repository!
+*.pem
+*-key.pem
+*.crt
+*.key
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# VS Code
+.vscode/
+
+# XAMPP Logs
+logs/
+
+# Node (falls später verwendet)
+node_modules/
