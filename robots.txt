@@ -1,0 +1,13 @@
+# robots.txt – heinz-lindner-baum.de
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Rechtliche Seiten nicht indexieren
+Disallow: /impressum.html
+Disallow: /en/legal.html
+Disallow: /es/aviso-legal.html
+
+# Sitemap
+Sitemap: https://heinz-lindner-baum.de/sitemap.xml
