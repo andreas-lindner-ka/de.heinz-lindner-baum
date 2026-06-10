@@ -1,33 +1,42 @@
 /**
  * Shared Navigation Web Component – heinz-lindner-baum.de
- * Verwendung: <hlb-nav lang="de"></hlb-nav>
+ * Verwendung: <hlb-nav lang="de" context="home|blog|legal"></hlb-nav>
  * lang: "de" | "en" | "es"
+ * context: "home" (default) | "blog" | "legal"
  */
 
 class HlbNav extends HTMLElement {
   connectedCallback() {
-    const lang = this.getAttribute('lang') || 'de';
-    const base = this.getAttribute('base') || '';  // z.B. "../" für Unterverzeichnisse
+    const lang    = this.getAttribute('lang')    || 'de';
+    const context = this.getAttribute('context') || 'home';
 
     const labels = {
-      de: { story: 'Geschichte', impact: 'Wirkung', tree: 'Mammutbaum', photos: 'Fotos', legal: 'Impressum' },
-      en: { story: 'Story', impact: 'Impact', tree: 'The Tree', photos: 'Photos', legal: 'Legal Notice' },
-      es: { story: 'Historia', impact: 'Impacto', tree: 'El Árbol', photos: 'Fotos', legal: 'Aviso Legal' }
+      de: { story: 'Geschichte', impact: 'Wirkung', tree: 'Mammutbaum', location: 'Standort', blog: 'Blog' },
+      en: { story: 'Story',      impact: 'Impact',  tree: 'The Tree',    location: 'Location', blog: 'Blog' },
+      es: { story: 'Historia',   impact: 'Impacto', tree: 'El Árbol',    location: 'Ubicación',blog: 'Blog' }
     };
-
     const t = labels[lang] || labels.de;
 
-    const langLinks = {
-      de: `${base}index.html`,
-      en: `${base}en/index.html`,
-      es: `${base}es/index.html`
+    // Absolute Pfade – funktionieren auf jeder Seite
+    const homeLinks = {
+      de: '/',
+      en: '/en/',
+      es: '/es/'
+    };
+    const blogLinks = {
+      de: '/blog/',
+      en: '/en/blog/',
+      es: '/es/blog/'
     };
 
-    const legalLink = lang === 'de'
-      ? `${base}impressum.html`
-      : lang === 'en'
-        ? `${base}en/legal.html`
-        : `${base}es/aviso-legal.html`;
+    // Auf der Hauptseite: Anker-Links; auf anderen Seiten: zurück zur Hauptseite + Anker
+    const home = homeLinks[lang];
+    const anchorLinks = {
+      story:    context === 'home' ? '#geschichte' : `${home}#geschichte`,
+      impact:   context === 'home' ? '#wirkung'    : `${home}#wirkung`,
+      tree:     context === 'home' ? '#mammutbaum' : `${home}#mammutbaum`,
+      location: context === 'home' ? '#fotos'      : `${home}#fotos`,
+    };
 
     this.innerHTML = `
       <style>
@@ -55,7 +64,7 @@ class HlbNav extends HTMLElement {
         }
         hlb-nav .nav-center {
           display: flex;
-          gap: 2rem;
+          gap: 1.75rem;
           list-style: none;
           margin: 0;
           padding: 0;
@@ -69,6 +78,7 @@ class HlbNav extends HTMLElement {
           transition: color 0.2s;
         }
         hlb-nav .nav-center a:hover { color: #1D9E75; }
+        hlb-nav .nav-center a.active { color: #0a3d2b; font-weight: 500; }
         hlb-nav .nav-right {
           display: flex;
           align-items: center;
@@ -90,29 +100,27 @@ class HlbNav extends HTMLElement {
           font-weight: 500;
           background: #E1F5EE;
         }
-        hlb-nav .lang-sep {
-          color: rgba(0,0,0,0.15);
-          font-size: 11px;
-        }
+        hlb-nav .lang-sep { color: rgba(0,0,0,0.15); font-size: 11px; }
         @media (max-width: 700px) {
           hlb-nav .nav-center { display: none; }
           hlb-nav nav { padding: 0 1rem; }
         }
       </style>
       <nav>
-        <a href="${langLinks[lang]}" class="nav-logo">Der Heinz-Lindner-Baum</a>
+        <a href="${home}" class="nav-logo">Der Heinz-Lindner-Baum</a>
         <ul class="nav-center">
-          <li><a href="#geschichte">${t.story}</a></li>
-          <li><a href="#wirkung">${t.impact}</a></li>
-          <li><a href="#mammutbaum">${t.tree}</a></li>
-          <li><a href="#fotos">${t.photos}</a></li>
+          <li><a href="${anchorLinks.story}">${t.story}</a></li>
+          <li><a href="${anchorLinks.impact}">${t.impact}</a></li>
+          <li><a href="${anchorLinks.tree}">${t.tree}</a></li>
+          <li><a href="${anchorLinks.location}">${t.location}</a></li>
+          <li><a href="${blogLinks[lang]}" ${context === 'blog' ? 'class="active"' : ''}>${t.blog}</a></li>
         </ul>
         <div class="nav-right">
-          <a href="${langLinks.de}" class="lang-btn ${lang === 'de' ? 'active' : ''}">DE</a>
+          <a href="${homeLinks.de}" class="lang-btn ${lang === 'de' ? 'active' : ''}">DE</a>
           <span class="lang-sep">|</span>
-          <a href="${langLinks.en}" class="lang-btn ${lang === 'en' ? 'active' : ''}">EN</a>
+          <a href="${homeLinks.en}" class="lang-btn ${lang === 'en' ? 'active' : ''}">EN</a>
           <span class="lang-sep">|</span>
-          <a href="${langLinks.es}" class="lang-btn ${lang === 'es' ? 'active' : ''}">ES</a>
+          <a href="${homeLinks.es}" class="lang-btn ${lang === 'es' ? 'active' : ''}">ES</a>
         </div>
       </nav>
     `;
