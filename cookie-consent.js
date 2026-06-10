@@ -31,7 +31,7 @@
     s.id = 'adsense-script';
     s.async = true;
     // Ersetze ca-pub-XXXXXXXXXXXXXXXX mit deiner echten AdSense Publisher-ID
-    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7359766601419930';
     s.crossOrigin = 'anonymous';
     document.head.appendChild(s);
   }
