@@ -7,32 +7,31 @@
 class HlbFooter extends HTMLElement {
   connectedCallback() {
     const lang = this.getAttribute('lang') || 'de';
-    const base = this.getAttribute('base') || '';
 
     const year = new Date().getFullYear();
 
     const content = {
       de: {
         legal: 'Impressum & Datenschutz',
-        legalLink: `${base}impressum.html`,
+        legalLink: '/impressum.html',
         location: 'Karlsruhe, Baden-Württemberg'
       },
       en: {
         legal: 'Legal Notice & Privacy',
-        legalLink: `${base}en/legal.html`,
+        legalLink: '/en/legal.html',
         location: 'Karlsruhe, Baden-Württemberg, Germany'
       },
       es: {
         legal: 'Aviso Legal & Privacidad',
-        legalLink: `${base}es/aviso-legal.html`,
+        legalLink: '/es/aviso-legal.html',
         location: 'Karlsruhe, Baden-Württemberg, Alemania'
       }
     };
 
     const langLinks = {
-      de: `${base}index.html`,
-      en: `${base}en/index.html`,
-      es: `${base}es/index.html`
+      de: '/',
+      en: '/en/',
+      es: '/es/'
     };
 
     const t = content[lang] || content.de;
