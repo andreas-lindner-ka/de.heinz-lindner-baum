@@ -18,3 +18,5 @@ logs/
 
 # Node (falls später verwendet)
 node_modules/
+
+build.php

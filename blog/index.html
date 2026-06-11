@@ -13,15 +13,11 @@
   <link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/">
   <link rel="alternate" hreflang="x-default" href="https://heinz-lindner-baum.de/blog/">
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a3d2b">
-
-    <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7359766601419930" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/fonts/fonts.css">
   <script src="/cookie-consent.js"></script>
@@ -46,7 +42,7 @@
 
     .article-card { border-bottom: 1px solid var(--border); padding: 2rem 0; }
     .article-card:last-child { border-bottom: none; }
-    .card-meta { font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.5rem; display: flex; gap: 0.75rem; }
+    .card-meta { font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
     .card-tag { background: var(--green-pale); color: var(--green-mid); padding: 2px 8px; border-radius: 20px; font-size: 11px; letter-spacing: 0.05em; }
     .article-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; font-weight: 500; color: var(--green-dark); margin-bottom: 0.5rem; line-height: 1.3; }
     .article-card h2 a { color: inherit; text-decoration: none; transition: color 0.2s; }
@@ -55,7 +51,10 @@
     .read-more { font-size: 13px; color: var(--green-mid); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.2s; }
     .read-more:hover { gap: 8px; }
 
-    @media (max-width: 600px) { main { padding: 2rem 1.25rem 4rem; } .page-header { padding: 3rem 1.25rem 2rem; } }
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.25rem 4rem; }
+      .page-header { padding: 3rem 1.25rem 2rem; }
+    }
   </style>
 </head>
 <body>
@@ -65,20 +64,34 @@
   <div class="page-header">
     <div class="page-header-inner">
       <span class="page-eyebrow">Blog</span>
-      <h1>Artikel & Hintergründe</h1>
+      <h1>Artikel &amp; Hintergründe</h1>
     </div>
   </div>
 
   <main>
+
     <div class="article-card">
       <div class="card-meta">
         <span>10. Juni 2026</span>
         <span class="card-tag">Stadtklima</span>
         <span class="card-tag">Hitzeschutz</span>
+        
       </div>
       <h2><a href="/blog/stadtbaeume-hitze-2026.html">Fast eine Million Stadtbäume verschwunden – was das für Karlsruhe bedeutet</a></h2>
-      <p>Der Hitze-Check 2026 der Deutschen Umwelthilfe zeigt: Deutschlands Städte verlieren massiv Baumbestand. 149 von 195 untersuchten Städten erhalten eine Gelbe Karte. Was die Zahlen bedeuten – und warum jeder Baum im Privatgarten zählt.</p>
+      <p>Zwischen 2018 und 2025 sind in deutschen Städten fast eine Million Bäume verschwunden. Was der aktuelle Hitze-Check der Deutschen Umwelthilfe bedeutet – und warum jeder Baum zählt.</p>
       <a href="/blog/stadtbaeume-hitze-2026.html" class="read-more">Artikel lesen →</a>
+    </div>
+    <div class="article-card">
+      <div class="card-meta">
+        <span>17. Juli 2025</span>
+        <span class="card-tag">Stadtklima</span>
+        <span class="card-tag">Hitzeschutz</span>
+        <span class="card-tag">Stadtbäume</span>
+        
+      </div>
+      <h2><a href="/blog/stadtbaeume-kosten-pflanzung-2025.html">Warum ein einziger Stadtbaum bis zu 40.000 Euro kostet</a></h2>
+      <p>Städte wie Berlin, Karlsruhe und München kämpfen gegen Hitzestress – und scheitern am Geld. Warum das Pflanzen eines Stadtbaums so teuer ist und was die Alternative wäre.</p>
+      <a href="/blog/stadtbaeume-kosten-pflanzung-2025.html" class="read-more">Artikel lesen →</a>
     </div>
   </main>
 

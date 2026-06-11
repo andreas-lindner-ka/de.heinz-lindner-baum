@@ -68,7 +68,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/"/>
   </url>
 
-  <!-- Artikel: Stadtbäume & Hitze 2026 DE -->
+  <!-- Artikel: Fast eine Million Stadtbäume verschwunden – was das für  DE -->
   <url>
     <loc>https://heinz-lindner-baum.de/blog/stadtbaeume-hitze-2026.html</loc>
     <lastmod>2026-06-10</lastmod>
@@ -79,7 +79,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-calor-2026.html"/>
   </url>
 
-  <!-- Artikel: Stadtbäume & Hitze 2026 EN -->
+  <!-- Artikel: Fast eine Million Stadtbäume verschwunden – was das für  EN -->
   <url>
     <loc>https://heinz-lindner-baum.de/en/blog/urban-trees-heat-2026.html</loc>
     <lastmod>2026-06-10</lastmod>
@@ -90,7 +90,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-calor-2026.html"/>
   </url>
 
-  <!-- Artikel: Stadtbäume & Hitze 2026 ES -->
+  <!-- Artikel: Fast eine Million Stadtbäume verschwunden – was das für  ES -->
   <url>
     <loc>https://heinz-lindner-baum.de/es/blog/arboles-urbanos-calor-2026.html</loc>
     <lastmod>2026-06-10</lastmod>
@@ -99,6 +99,39 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/stadtbaeume-hitze-2026.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/urban-trees-heat-2026.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-calor-2026.html"/>
+  </url>
+
+  <!-- Artikel: Warum ein einziger Stadtbaum bis zu 40.000 Euro kostet DE -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/blog/stadtbaeume-kosten-pflanzung-2025.html</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/stadtbaeume-kosten-pflanzung-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/urban-trees-costs-planting-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-costos-2025.html"/>
+  </url>
+
+  <!-- Artikel: Warum ein einziger Stadtbaum bis zu 40.000 Euro kostet EN -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/en/blog/urban-trees-costs-planting-2025.html</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/stadtbaeume-kosten-pflanzung-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/urban-trees-costs-planting-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-costos-2025.html"/>
+  </url>
+
+  <!-- Artikel: Warum ein einziger Stadtbaum bis zu 40.000 Euro kostet ES -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/es/blog/arboles-urbanos-costos-2025.html</loc>
+    <lastmod>2025-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/stadtbaeume-kosten-pflanzung-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/urban-trees-costs-planting-2025.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-costos-2025.html"/>
   </url>
 
 </urlset>
