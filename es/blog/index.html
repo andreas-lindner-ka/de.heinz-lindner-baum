@@ -3,108 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog – Der Heinz-Lindner-Baum</title>
-  <meta name="description" content="Artículos sobre el árbol Heinz-Lindner, clima urbano, secuoyas gigantes y naturaleza en Karlsruhe.">
+
+  <!-- SEO -->
+  <title>El Árbol Heinz Lindner – Secuoya Costera Karlsruhe | Sequoia sempervirens</title>
+  <meta name="description" content="Una secuoya costera en Karlsruhe, Alemania, como monumento vivo a Heinz Lindner (1934–2023), ingeniero mecánico en la central eléctrica de vapor del Rheinhafen. Creciendo desde 1990.">
+  <meta name="keywords" content="Heinz Lindner, Secuoya costera Karlsruhe, Sequoia sempervirens Alemania, árbol monumento Karlsruhe, central eléctrica Rheinhafen, Mammutbaum">
+  <meta name="author" content="Familie Lindner">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://heinz-lindner-baum.de/es/blog/">
-
-  <link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/">
-  <link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/">
-  <link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/">
-  <link rel="alternate" hreflang="x-default" href="https://heinz-lindner-baum.de/blog/">
-
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a3d2b">
 
+  <link rel="canonical" href="https://heinz-lindner-baum.de/es/">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/">
+  <link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/">
+  <link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/">
+  <link rel="alternate" hreflang="x-default" href="https://heinz-lindner-baum.de/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://heinz-lindner-baum.de/es/">
+  <meta property="og:title" content="El Árbol Heinz Lindner – Secuoya Costera en Karlsruhe">
+  <meta property="og:description" content="Una secuoya costera en Karlsruhe como monumento vivo al ingeniero Heinz Lindner (1934–2023).">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Árbol Heinz Lindner – Secuoya Costera Karlsruhe">
+  <meta name="twitter:description" content="Una secuoya costera en Karlsruhe, Alemania, como monumento vivo al ingeniero Heinz Lindner (1934–2023).">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandmarkOrFeature",
+    "name": "El Árbol Heinz Lindner",
+    "description": "Sequoia sempervirens (Secuoya Costera) en Karlsruhe, Alemania, plantada en los años 90, nombrada en honor a Heinz Lindner (1934–2023), ingeniero mecánico en la central eléctrica de vapor del Rheinhafen.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karlsruhe",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "url": "https://heinz-lindner-baum.de/es/",
+    "subjectOf": {
+      "@type": "Person",
+      "name": "Heinz Lindner",
+      "birthDate": "1934",
+      "deathDate": "2023",
+      "jobTitle": "Ingeniero Mecánico",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Central Eléctrica de Vapor del Rheinhafen, Karlsruhe"
+      }
+    }
+  }
+  </script>
+
+  <!-- Fuentes locales / Local fonts (RGPD conforme) -->
+  <!-- Google AdSense -->
+
   <link rel="stylesheet" href="/fonts/fonts.css">
+
+  <!-- Cookie Consent & Web Components -->
   <script src="/cookie-consent.js"></script>
   <script src="/nav.js"></script>
   <script src="/footer.js"></script>
 
   <style>
     :root {
-      --green-dark: #0a3d2b; --green-mid: #1D9E75; --green-pale: #f0faf6;
-      --text: #1a1a1a; --text-muted: #5a5a5a; --text-subtle: #8a8a8a;
-      --border: rgba(0,0,0,0.08); --white: #ffffff;
+      --green-dark: #0a3d2b;
+      --green-mid: #1D9E75;
+      --green-light: #E1F5EE;
+      --green-pale: #f0faf6;
+      --bark: #5c3d2e;
+      --bark-light: #f5ede8;
+      --text: #1a1a1a;
+      --text-muted: #5a5a5a;
+      --text-subtle: #8a8a8a;
+      --border: rgba(0,0,0,0.08);
+      --white: #ffffff;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body { font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; color: var(--text); background: var(--white); line-height: 1.75; }
 
-    .page-header { background: var(--green-pale); padding: 4rem 2rem 3rem; border-bottom: 1px solid rgba(29,158,117,0.1); }
-    .page-header-inner { max-width: 720px; margin: 0 auto; }
-    .page-eyebrow { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 1rem; display: block; }
-    .page-header h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 500; color: var(--green-dark); }
+    .hero { min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(29,158,117,0.08) 0%, transparent 70%), linear-gradient(180deg, #f8fdf9 0%, #ffffff 100%); position: relative; overflow: hidden; }
+    .hero-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-mid); font-weight: 400; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 500; color: var(--green-dark); line-height: 1.15; margin-bottom: 1rem; max-width: 700px; }
+    .hero-sub { font-size: 13px; letter-spacing: 0.12em; color: var(--text-subtle); margin-bottom: 2rem; text-transform: uppercase; font-weight: 400; }
+    .hero-tagline { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-muted); max-width: 520px; font-style: italic; margin-bottom: 2.5rem; line-height: 1.8; }
+    .hero-years { display: inline-block; border: 1px solid rgba(29,158,117,0.3); color: var(--green-mid); font-size: 13px; letter-spacing: 0.1em; padding: 6px 20px; border-radius: 30px; }
+    .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--green-mid), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+    @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
-    main { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .stats-band { background: var(--green-dark); padding: 3rem 2rem; }
+    .stats-inner { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; text-align: center; }
+    .stat-item .val { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--white); display: block; margin-bottom: 4px; }
+    .stat-item .lbl { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
-    .article-card { border-bottom: 1px solid var(--border); padding: 2rem 0; }
-    .article-card:last-child { border-bottom: none; }
-    .card-meta { font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
-    .card-tag { background: var(--green-pale); color: var(--green-mid); padding: 2px 8px; border-radius: 20px; font-size: 11px; letter-spacing: 0.05em; }
-    .article-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; font-weight: 500; color: var(--green-dark); margin-bottom: 0.5rem; line-height: 1.3; }
-    .article-card h2 a { color: inherit; text-decoration: none; transition: color 0.2s; }
-    .article-card h2 a:hover { color: var(--green-mid); }
-    .article-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.75rem; }
-    .read-more { font-size: 13px; color: var(--green-mid); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.2s; }
-    .read-more:hover { gap: 8px; }
+    section { padding: 5rem 2rem; max-width: 800px; margin: 0 auto; }
+    .section-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green-mid); font-weight: 400; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); max-width: 80px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; color: var(--green-dark); margin-bottom: 1.5rem; line-height: 1.3; }
+    p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.25rem; max-width: 640px; }
+    p:last-child { margin-bottom: 0; }
 
-    @media (max-width: 600px) {
-      main { padding: 2rem 1.25rem 4rem; }
-      .page-header { padding: 3rem 1.25rem 2rem; }
-    }
+    .career-block { border-left: 2px solid var(--green-mid); padding: 1.5rem 1.75rem; margin: 2rem 0; background: var(--green-pale); border-radius: 0 8px 8px 0; }
+    .career-block h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 500; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .career-block p { font-size: 0.95rem; margin: 0; }
+
+    blockquote { border-left: 2px solid var(--green-mid); padding: 1rem 1.5rem; margin: 2rem 0; font-style: italic; font-size: 1.1rem; color: var(--text); line-height: 1.7; }
+
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 2rem 0; }
+    .impact-cell { background: var(--white); padding: 1.5rem 1.25rem; text-align: center; }
+    .impact-cell .ic-val { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 500; color: var(--green-dark); display: block; margin-bottom: 4px; }
+    .impact-cell .ic-lbl { font-size: 12px; color: var(--text-subtle); line-height: 1.4; }
+
+    .benefit-list { list-style: none; margin: 1.5rem 0; }
+    .benefit-list li { display: flex; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+    .benefit-list li:last-child { border-bottom: none; }
+    .benefit-list li strong { color: var(--green-dark); font-weight: 500; display: block; margin-bottom: 2px; font-family: 'Playfair Display', serif; font-size: 1rem; }
+    .benefit-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; font-size: 14px; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 1.5rem; }
+    .why-card { background: var(--green-pale); border: 1px solid rgba(29,158,117,0.15); border-radius: 8px; padding: 1.25rem; }
+    .why-card .wc-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 4px; }
+    .why-card .wc-val { font-size: 0.95rem; color: var(--green-dark); font-family: 'Playfair Display', serif; }
+
+    .parallel-box { background: var(--bark-light); border-left: 2px solid var(--bark); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin: 2rem 0; font-style: italic; font-size: 1rem; color: var(--bark); line-height: 1.7; }
+
+    .photo-placeholder { border: 1px dashed rgba(29,158,117,0.3); border-radius: 8px; padding: 4rem 2rem; text-align: center; background: var(--green-pale); color: var(--text-subtle); font-size: 0.9rem; margin: 1.5rem 0; }
+    .photo-placeholder .ph-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; opacity: 0.4; }
+    .divider { width: 40px; height: 1px; background: var(--green-mid); margin: 2rem 0; }
+
+    @media (max-width: 600px) { section { padding: 3rem 1.25rem; } .stats-inner { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
 
-  <hlb-nav lang="es" context="blog"></hlb-nav>
+  <hlb-nav lang="es"></hlb-nav>
 
-  <div class="page-header">
-    <div class="page-header-inner">
-      <span class="page-eyebrow">Blog</span>
-      <h1>Artículos &amp; Trasfondo</h1>
+  <header class="hero">
+    <p class="hero-eyebrow">Karlsruhe, Alemania · Sequoia sempervirens</p>
+    <h1>El Árbol<br>Heinz Lindner</h1>
+    <p class="hero-sub">Secuoya Costera · Karlsruhe · Baden-Württemberg</p>
+    <p class="hero-tagline">Un ingeniero que abasteció Karlsruhe de energía durante décadas –<br>un árbol que permanecerá durante siglos.</p>
+    <span class="hero-years">Heinz Lindner · 1934 – 2023</span>
+    <div class="hero-scroll"><div class="scroll-line"></div></div>
+  </header>
+
+  <div class="stats-band" role="region" aria-label="Datos del árbol">
+    <div class="stats-inner">
+      <div class="stat-item"><span class="val">1990</span><span class="lbl">plantado</span></div>
+      <div class="stat-item"><span class="val">35+ años</span><span class="lbl">creciendo</span></div>
+      <div class="stat-item"><span class="val">hasta 90 m</span><span class="lbl">altura potencial</span></div>
+      <div class="stat-item"><span class="val">~3.000</span><span class="lbl">posibles años de vida</span></div>
     </div>
   </div>
 
-  <main>
+  <section id="geschichte">
+    <p class="section-label">La Historia</p>
+    <h2>Una vida dedicada a la ingeniería – un árbol construido para la eternidad</h2>
+    <p>Heinz Lindner nació en 1934 y dedicó su vida a la ingeniería mecánica. Como ingeniero comprendió mejor que nadie que la verdadera calidad requiere tiempo – y que las mejores construcciones son aquellas que perduran generaciones.</p>
 
-    <div class="article-card">
-      <div class="card-meta">
-        <span>16 de julio de 2026</span>
-        <span class="card-tag">Clima Urbano</span>
-        <span class="card-tag">Refrigeración por Árboles</span>
-        
-      </div>
-      <h2><a href="/es/blog/indice-verde-humedo-fresco-2026.html">El Índice Verde-Húmedo-Fresco 2026: qué revela sobre un solo árbol</a></h2>
-      <p>El nuevo Índice Verde-Húmedo-Fresco de NABU y ECONICS muestra que Alemania pierde su refrigeración natural. Qué significa el principio del índice para un solo árbol.</p>
-      <a href="/es/blog/indice-verde-humedo-fresco-2026.html" class="read-more">Leer artículo →</a>
+    <div class="career-block">
+      <h3>Central Eléctrica de Vapor del Rheinhafen, Karlsruhe</h3>
+      <p>Heinz Lindner trabajó en la central eléctrica de vapor del Rheinhafen – uno de los enclaves industriales más importantes de Karlsruhe. Como ingeniero mecánico mantuvo las turbinas en funcionamiento, los calderos bajo presión y garantizó que la ciudad recibiera un suministro eléctrico fiable. Cada luz que brilló en Karlsruhe llevaba un poco de su trabajo.</p>
     </div>
-    <div class="article-card">
-      <div class="card-meta">
-        <span>10 de junio de 2026</span>
-        <span class="card-tag">Stadtklima</span>
-        <span class="card-tag">Hitzeschutz</span>
-        
-      </div>
-      <h2><a href="/es/blog/arboles-urbanos-calor-2026.html">Fast eine Million Stadtbäume verschwunden – was das für Karlsruhe bedeutet</a></h2>
-      <p>Zwischen 2018 und 2025 sind in deutschen Städten fast eine Million Bäume verschwunden. Was der aktuelle Hitze-Check der Deutschen Umwelthilfe bedeutet – und warum jeder Baum zählt.</p>
-      <a href="/es/blog/arboles-urbanos-calor-2026.html" class="read-more">Leer artículo →</a>
+
+    <blockquote>«Un buen ingeniero no piensa en años – piensa en décadas.»</blockquote>
+
+    <p>En 1990, se plantó una secuoya costera en su jardín en Karlsruhe – la especie arbórea más alta de la Tierra. Mientras Heinz Lindner pasaba décadas manteniendo máquinas en marcha y abasteciendo de energía a la ciudad, este árbol crecía en silencio a su lado. Hoy, tras su muerte en 2023, lleva su nombre: el Árbol Heinz Lindner.</p>
+
+    <div class="parallel-box">
+      La central entregaba energía a la ciudad. El árbol hace lo propio a su manera – a través del aire limpio, el frescor y la vida. Difícilmente podría imaginarse una transición más hermosa de una obra vital a la siguiente.
     </div>
-    <div class="article-card">
-      <div class="card-meta">
-        <span>17 de julio de 2025</span>
-        <span class="card-tag">Clima Urbano</span>
-        <span class="card-tag">Protección contra el Calor</span>
-        <span class="card-tag">Árboles Urbanos</span>
-        
-      </div>
-      <h2><a href="/es/blog/arboles-urbanos-costos-2025.html">Por qué un solo árbol urbano puede costar hasta 40.000 euros</a></h2>
-      <p>Las ciudades alemanas necesitan cientos de miles de árboles nuevos, pero incluso la reposición fracasa por costes y burocracia. Dos enfoques muestran lo que podría funcionar.</p>
-      <a href="/es/blog/arboles-urbanos-costos-2025.html" class="read-more">Leer artículo →</a>
+  </section>
+
+  <section id="wirkung">
+    <p class="section-label">Clima Urbano y Naturaleza</p>
+    <h2>Lo que este árbol hace por Karlsruhe cada día</h2>
+    <p>Ciudades como Karlsruhe se calientan cada vez más debido al cambio climático. Los árboles no son decoración – son infraestructura vital. Una secuoya costera madura hace a diario lo que los ingenieros de otro modo necesitarían máquinas para lograr.</p>
+
+    <div class="impact-grid">
+      <div class="impact-cell"><span class="ic-val">hasta –8 °C</span><span class="ic-lbl">enfriamiento del aire circundante por evaporación</span></div>
+      <div class="impact-cell"><span class="ic-val">400 L</span><span class="ic-lbl">agua evaporada por día por un árbol grande</span></div>
+      <div class="impact-cell"><span class="ic-val">100 kg</span><span class="ic-lbl">CO₂ absorbido por una secuoya costera al año</span></div>
+      <div class="impact-cell"><span class="ic-val">500+</span><span class="ic-lbl">especies de insectos viven en árboles urbanos</span></div>
     </div>
-  </main>
+
+    <ul class="benefit-list">
+      <li><div class="benefit-icon">☀️</div><div><strong>Protección contra el calor</strong>Mediante la sombra y la evaporación, los árboles enfrían notablemente su entorno – especialmente valioso durante las olas de calor, cada vez más frecuentes en Karlsruhe.</div></li>
+      <li><div class="benefit-icon">🌧️</div><div><strong>Gestión del agua de lluvia</strong>Las raíces profundas absorben el agua de lluvia y la liberan lentamente – evitando inundaciones y reduciendo la presión sobre el sistema de alcantarillado.</div></li>
+      <li><div class="benefit-icon">🔇</div><div><strong>Reducción del ruido</strong>Las densas copas de los árboles absorben las ondas sonoras, haciendo notablemente más silenciosas las zonas residenciales urbanas.</div></li>
+      <li><div class="benefit-icon">❤️</div><div><strong>Salud y bienestar</strong>Las personas que viven cerca de árboles tienen demostrablemente menor presión arterial, menos estrés y se recuperan de enfermedades más rápidamente.</div></li>
+      <li><div class="benefit-icon">🐦</div><div><strong>Hábitat para la fauna</strong>Aves, insectos, pequeños mamíferos – un árbol viejo es todo un ecosistema. El Árbol Heinz Lindner albergará cada vez más vida con el paso de los años.</div></li>
+    </ul>
+
+    <blockquote>El Árbol Heinz Lindner no es un monumento privado. Trabaja cada día para el barrio, para el clima urbano, para la naturaleza – en silencio y sin descanso. Igual que el hombre al que debe su nombre.</blockquote>
+  </section>
+
+  <section id="mammutbaum">
+    <p class="section-label">Sequoia sempervirens</p>
+    <h2>¿Por qué una secuoya costera?</h2>
+    <p>La secuoya costera no es un árbol de jardín cualquiera. Es lo más alto que la naturaleza ha producido en forma de ser vivo – y uno de los más longevos. Una elección que habla por sí sola.</p>
+
+    <div class="why-grid">
+      <div class="why-card"><div class="wc-label">Récord</div><div class="wc-val">El árbol más alto del mundo (hasta 116 metros)</div></div>
+      <div class="why-card"><div class="wc-label">Longevidad</div><div class="wc-val">Hasta 2.200 años de vida</div></div>
+      <div class="why-card"><div class="wc-label">Resistencia</div><div class="wc-val">Resistente al fuego gracias a su corteza de hasta 30 cm</div></div>
+      <div class="why-card"><div class="wc-label">Origen</div><div class="wc-val">Costa de California – y ahora Karlsruhe</div></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <p>El ejemplar más alto conocido de la especie, el <strong>Hyperion</strong> en el Parque Nacional Redwood en California, mide unos 115,85 metros y está considerado el árbol vivo más alto de la Tierra. Su ubicación exacta se mantiene deliberadamente en secreto por las autoridades del parque para proteger sus delicadas raíces superficiales de los daños causados por los visitantes.</p>
+    <p>El Árbol Heinz Lindner en Karlsruhe comparte especie con este récord mundial. Con un poco de paciencia – y unos cuantos siglos – quién sabe lo que aún puede ser posible.</p>
+  </section>
+
+  <section id="fotos">
+    <p class="section-label">Ubicación</p>
+    <h2>Ubicación</h2>
+
+    <!-- GALERÍA FOTOGRÁFICA – se añadirá más adelante
+    <p>Tras más de 35 años de crecimiento, el Árbol Heinz Lindner ya es un espectáculo impresionante. Fotos próximamente.</p>
+    <div class="photo-placeholder">
+      <span class="ph-icon">📷</span>
+      Las fotos se añadirán aquí – el árbol lleva creciendo más de tres décadas.
+    </div>
+    -->
+    <p>El Árbol Heinz Lindner se encuentra en un jardín privado en Karlsruhe, Baden-Württemberg, Alemania.</p>
+    <div style="border-radius:8px; overflow:hidden; margin-top:1.5rem; border:1px solid var(--border);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200!2d8.445807866400322!3d49.01769817329243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDAxJzAzLjciTiA4wrAyNicyNC45IkU!5e1!3m2!1ses!2sde!4v1"
+        width="100%"
+        height="400"
+        style="border:0; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación del Árbol Heinz Lindner en Karlsruhe">
+      </iframe>
+    </div>
+    <p style="font-size:0.8rem; color:var(--text-subtle); margin-top:0.5rem;">
+      Coordenadas: 49.01770° N, 8.44581° E
+    </p>
+  </section>
 
   <hlb-footer lang="es"></hlb-footer>
 
