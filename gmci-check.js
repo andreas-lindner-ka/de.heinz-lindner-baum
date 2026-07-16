@@ -39,6 +39,8 @@ const GMCI_TEXTS = {
       <p><strong>Wichtiger Hinweis:</strong> Dies ist keine offizielle Kennzahl von NABU/ECONICS Institute, sondern eine eigenständige, methodisch angelehnte Berechnung auf Basis derselben offenen Datenquellen. Die exakten Referenz-Normierungswerte der Originalstudie sind nicht öffentlich dokumentiert.</p>
     `,
     sources: "Quellen: Adhikari et al. (2026), DOI 10.1002/2688-8319.70270 · Datensatz: Zenodo 10.5281/zenodo.17081072",
+    fullMethodLink: "Vollständige technische Dokumentation →",
+    fullMethodUrl: "/gmci-methodik.html",
     tiers: [
       { max: 0.30, label: "Sehr kritisch", desc: "Sehr geringe Vegetation, Hitze- und Trockenstress hoch" },
       { max: 0.40, label: "Kritisch", desc: "Eingeschränkte Kühlleistung, Handlungsbedarf" },
@@ -76,6 +78,8 @@ const GMCI_TEXTS = {
       <p><strong>Note:</strong> This is not an official metric from NABU/ECONICS Institute, but an independent calculation following the same methodology, based on the same open data sources. The exact reference normalization values of the original study are not publicly documented.</p>
     `,
     sources: "Sources: Adhikari et al. (2026), DOI 10.1002/2688-8319.70270 · Dataset: Zenodo 10.5281/zenodo.17081072",
+    fullMethodLink: "Full technical documentation →",
+    fullMethodUrl: "/en/gmci-methodik.html",
     tiers: [
       { max: 0.30, label: "Very critical", desc: "Very low vegetation, high heat and drought stress" },
       { max: 0.40, label: "Critical", desc: "Limited cooling capacity, action needed" },
@@ -113,6 +117,8 @@ const GMCI_TEXTS = {
       <p><strong>Nota importante:</strong> Esta no es una métrica oficial de NABU/ECONICS Institute, sino un cálculo propio basado en la misma metodología y las mismas fuentes de datos abiertas. Los valores exactos de normalización de referencia del estudio original no están documentados públicamente.</p>
     `,
     sources: "Fuentes: Adhikari et al. (2026), DOI 10.1002/2688-8319.70270 · Conjunto de datos: Zenodo 10.5281/zenodo.17081072",
+    fullMethodLink: "Documentación técnica completa →",
+    fullMethodUrl: "/es/gmci-methodik.html",
     tiers: [
       { max: 0.30, label: "Muy crítico", desc: "Vegetación muy baja, alto estrés por calor y sequía" },
       { max: 0.40, label: "Crítico", desc: "Capacidad de enfriamiento limitada, se requiere acción" },
@@ -321,6 +327,14 @@ class HlbGmciCheck extends HTMLElement {
         details[open] summary { margin-bottom: 0.6rem; }
         .method-body ol { padding-left: 1.3rem; }
         .method-body p { margin: 0.6rem 0; }
+        .full-method-link { margin: 0.8rem 0; }
+        .full-method-link a {
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: var(--green-mid, #1D9E75);
+          text-decoration: none;
+        }
+        .full-method-link a:hover { text-decoration: underline; }
         .sources { font-size: 0.78rem; opacity: 0.65; margin-top: 0.8rem; }
       </style>
 
@@ -352,6 +366,7 @@ class HlbGmciCheck extends HTMLElement {
       <details>
         <summary>${t.methodTitle}</summary>
         <div class="method-body">${t.methodBody}</div>
+        <p class="full-method-link"><a href="${t.fullMethodUrl}">${t.fullMethodLink}</a></p>
         <p class="sources">${t.sources}</p>
       </details>
     `;

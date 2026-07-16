@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology: Green-Moist-Cool Check – The Heinz Lindner Tree</title>
+  <meta name="description" content="Complete, transparent documentation of the calculation methodology behind the Green-Moist-Cool Check: data sources, formulas, normalization, and deviations from the official study.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a3d2b">
+
+  <link rel="canonical" href="https://heinz-lindner-baum.de/en/gmci-methodik.html">
+  <link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-methodik.html">
+  <link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-methodik.html">
+  <link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-methodik.html">
+  <link rel="alternate" hreflang="x-default" href="https://heinz-lindner-baum.de/gmci-methodik.html">
+
+  <link rel="stylesheet" href="/fonts/fonts.css">
+
+  <script src="/cookie-consent.js"></script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #0a3d2b;
+      --green-mid: #1D9E75;
+      --green-pale: #f0faf6;
+      --text: #1a1a1a;
+      --text-muted: #5a5a5a;
+      --text-subtle: #8a8a8a;
+      --border: rgba(0,0,0,0.08);
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.75;
+    }
+    .page-header { background: var(--green-pale); padding: 4rem 2rem 3rem; border-bottom: 1px solid rgba(29,158,117,0.1); }
+    .page-header-inner { max-width: 760px; margin: 0 auto; }
+    .page-eyebrow { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 1rem; display: block; }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 500; color: var(--green-dark); line-height: 1.25; }
+    .page-header .lead { margin-top: 1rem; font-size: 1.05rem; color: var(--text-muted); max-width: 600px; }
+    .version-tag { display: inline-block; margin-top: 1.25rem; font-size: 0.78rem; color: var(--text-subtle); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+    main { max-width: 760px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+    .notice-box { background: #fffbf0; border-left: 2px solid #d4a017; border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 3rem; font-size: 0.95rem; color: #7a6010; line-height: 1.7; }
+    .notice-box strong { color: #5c4a0d; }
+    .toc { background: var(--green-pale); border: 1px solid rgba(29,158,117,0.15); border-radius: 8px; padding: 1.5rem 1.75rem; margin-bottom: 3rem; }
+    .toc-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 500; color: var(--green-dark); margin-bottom: 0.75rem; }
+    .toc ol { list-style: none; counter-reset: toc-counter; }
+    .toc li { counter-increment: toc-counter; font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .toc li::before { content: counter(toc-counter) ". "; color: var(--green-mid); font-weight: 500; }
+    .toc a { color: var(--text-muted); text-decoration: none; }
+    .toc a:hover { color: var(--green-mid); }
+    section.doc-section { margin-bottom: 3rem; scroll-margin-top: 2rem; }
+    section.doc-section h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 500; color: var(--green-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    section.doc-section h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    section.doc-section p { font-size: 0.98rem; color: var(--text-muted); margin-bottom: 1rem; }
+    section.doc-section ol, section.doc-section ul { margin: 0 0 1rem 1.3rem; font-size: 0.98rem; color: var(--text-muted); }
+    section.doc-section li { margin-bottom: 0.4rem; }
+    section.doc-section a { color: var(--green-mid); text-decoration: none; }
+    section.doc-section a:hover { text-decoration: underline; }
+    blockquote { border-left: 2px solid var(--green-mid); padding: 1rem 1.5rem; margin: 1.5rem 0; font-style: italic; font-size: 0.95rem; color: var(--text); line-height: 1.7; background: var(--green-pale); border-radius: 0 8px 8px 0; }
+    pre { background: var(--green-dark); color: #d5efe3; border-radius: 8px; padding: 1.25rem 1.5rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; margin: 1rem 0 1.5rem; }
+    code { font-family: 'SF Mono', 'Fira Code', Consolas, monospace; }
+    p code, li code { background: var(--green-pale); color: var(--green-dark); padding: 2px 6px; border-radius: 4px; font-size: 0.88em; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.88rem; }
+    th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+    th { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--green-dark); background: var(--green-pale); }
+    .divider { height: 1px; background: var(--border); margin: 2.5rem 0; }
+    .back-to-tool { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-subtle); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-to-tool:hover { color: var(--green-mid); }
+    footer { background: var(--green-dark); padding: 2.5rem 2rem; text-align: center; color: rgba(255,255,255,0.4); font-size: 0.8rem; line-height: 1.8; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.9); }
+    @media (max-width: 600px) { main { padding: 2.5rem 1.25rem 4rem; } .page-header { padding: 3rem 1.25rem 2rem; } table { font-size: 0.78rem; } th, td { padding: 0.5rem; } }
+  </style>
+</head>
+<body>
+
+  <hlb-nav lang="en"></hlb-nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="page-eyebrow">Methodology Documentation</span>
+      <h1>How the Green-Moist-Cool Check is calculated</h1>
+      <p class="lead">Complete, transparent documentation of the calculation methodology — data sources, formulas, normalization, and every deviation from the official study.</p>
+      <span class="version-tag">Version 1.0 · July 2026</span>
+    </div>
+  </div>
+
+  <main>
+    <a href="/en/gmci-check.html" class="back-to-tool">← Back to the Green-Moist-Cool Check</a>
+
+    <div class="notice-box">
+      <strong>Important note upfront:</strong> The value shown on this website is <strong>not an official metric</strong> from NABU or the ECONICS Institute. It is an independent approximation that closely follows the methodology of the original paper, but uses its own data processing, since the exact reference values of the original study are not publicly documented.
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#background">Background and purpose</a></li>
+        <li><a href="#original">Underlying original methodology</a></li>
+        <li><a href="#data">Data basis of this implementation</a></li>
+        <li><a href="#calculation">Calculation steps</a></li>
+        <li><a href="#classes">Classification into categories</a></li>
+        <li><a href="#deviations">Deviations from the official methodology</a></li>
+        <li><a href="#validation">Validation / plausibility check</a></li>
+        <li><a href="#reproducibility">Reproducibility</a></li>
+        <li><a href="#licenses">Licenses and attributions</a></li>
+      </ol>
+    </div>
+
+    <section class="doc-section" id="background">
+      <h2>1. Background and purpose</h2>
+      <p>This tool calculates an approximation of the <strong>Green-Moist-Cool Index (GMCI)</strong> — in German, Grün-Feucht-Kühl-Index (GFKI) — for any German postal code. The GMCI was first described in:</p>
+      <blockquote>Adhikari, Y., Ibisch, P. L., Wohlleben, P., Schneider, A., &amp; Johnson, D. (2026). Working landscapes under climate change need to be green, moist, and cool—A case study of Germany. <em>Ecological Solutions and Evidence</em>, 7(2), e70270. <a href="https://doi.org/10.1002/2688-8319.70270" target="_blank" rel="noopener noreferrer">doi.org/10.1002/2688-8319.70270</a></blockquote>
+    </section>
+
+    <section class="doc-section" id="original">
+      <h2>2. Underlying original methodology</h2>
+      <p>According to the original publication (Section 2.5), the GMCI is defined as follows:</p>
+      <ol>
+        <li>Three input variables are determined per pixel and year: <strong>NDVIsep</strong> (September vegetation index), <strong>LSThot</strong> (maximum land surface temperature on hot days, ≥ 40 °C), and <strong>precipitation</strong> (annual total in mm).</li>
+        <li>NDVIsep and precipitation are linearly scaled to 0–1 (higher values = positive).</li>
+        <li>LSThot is also scaled to 0–1 and then <strong>inverted</strong> (cooler areas = higher values).</li>
+        <li>The GMCI of a pixel is the simple arithmetic mean of the three scaled values.</li>
+        <li>Multi-year composites are formed by averaging the annual GMCI values.</li>
+      </ol>
+      <p>This formula is explicitly described in the original paper; <strong>not documented</strong>, however, are the exact min/max reference values used for the 0–1 scaling.</p>
+    </section>
+
+    <section class="doc-section" id="data">
+      <h2>3. Data basis of this implementation</h2>
+
+      <h3>3.1 Raster data</h3>
+      <p>This tool uses the publicly available raster datasets provided by the original authors:</p>
+      <blockquote>Adhikari, Y., &amp; Ibisch, P. (2025). Working landscapes under climate change need to be green, moist and cool—A case study of Germany [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.17081072" target="_blank" rel="noopener noreferrer">doi.org/10.5281/zenodo.17081072</a></blockquote>
+
+      <table>
+        <thead><tr><th>Layer</th><th>Source</th><th>Content</th><th>Resolution</th></tr></thead>
+        <tbody>
+          <tr><td><code>LST_YYYY.tif</code></td><td>Landsat 8 &amp; 9</td><td>Surface temperature on hot days, only ≥ 40 °C</td><td>~500 m</td></tr>
+          <tr><td><code>NDVI_YYYY.tif</code></td><td>MODIS MOD13Q1</td><td>September vegetation index</td><td>~500 m</td></tr>
+          <tr><td><code>PPT_YYYY.tif</code></td><td>German Weather Service</td><td>Annual precipitation total (mm)</td><td>~500 m</td></tr>
+        </tbody>
+      </table>
+
+      <p>Technical properties (independently verified): coordinate system EPSG:4326, nodata encoded as NaN. The three layers are <strong>not pixel-perfectly aligned</strong>, so each coordinate lookup is performed separately per layer.</p>
+
+      <h3>3.2 Postal code coordinates</h3>
+      <p>Postal code → coordinate mapping uses an open, OpenStreetMap-based dataset from <a href="https://www.postleitzahl.net" target="_blank" rel="noopener noreferrer">postleitzahl.net</a> (license: ODbL/CC-BY-SA) covering approx. 8,170 German postal codes with centroid coordinates.</p>
+    </section>
+
+    <section class="doc-section" id="calculation">
+      <h2>4. Calculation steps</h2>
+      <p>The full implementation is available as a Python script. The calculation runs in six steps:</p>
+
+      <h3>Step 1 — Load base data</h3>
+      <p>For each year (2018–2024), the three raster files are read and nationwide min/max values of valid pixels are determined.</p>
+
+      <h3>Step 2 — Determine pixel value per coordinate (with fallback)</h3>
+      <p>Since the LST and NDVI layers have substantial nodata gaps, a <strong>nearest-valid-pixel fallback</strong> is used when a value is missing: on NaN, a growing search radius (up to 20 pixels) looks for valid neighbours and uses their average. If the search is unsuccessful, that year is excluded from the average for that component.</p>
+
+      <h3>Step 3 — Normalization (0–1 scaling)</h3>
+      <pre><code>scaled = (value − minimum) / (maximum − minimum)</code></pre>
+      <p>For LST, the result is additionally inverted (<code>1 − scaled</code>), so cooler locations score higher.</p>
+
+      <h3>Step 4 — Calculate annual GMCI</h3>
+      <pre><code>GMCI_year = (LST_scaled_inverted + NDVI_scaled + PPT_scaled) / 3</code></pre>
+
+      <h3>Step 5 — Form multi-year average</h3>
+      <p>The final GMCI value per postal code is the arithmetic mean of the available annual GMCI values (2018–2024). The number of years included is displayed transparently.</p>
+
+      <h3>Step 6 — Save results</h3>
+      <pre><code>{"01067": {"gmci": 0.377, "years": 7, "place": "Dresden"}, ...}</code></pre>
+      <p>The web component performs a purely client-side lookup on postal code entry — no live calculation happens in the browser or on a server.</p>
+    </section>
+
+    <section class="doc-section" id="classes">
+      <h2>5. Classification into categories</h2>
+      <p>The numeric GMCI value (0–1) is divided into five categories, based on the classification from the original authors' follow-up paper:</p>
+      <table>
+        <thead><tr><th>GMCI range</th><th>Category</th></tr></thead>
+        <tbody>
+          <tr><td>≤ 0.30</td><td>Very critical</td></tr>
+          <tr><td>≤ 0.40</td><td>Critical</td></tr>
+          <tr><td>≤ 0.50</td><td>Moderate</td></tr>
+          <tr><td>≤ 0.60</td><td>Good</td></tr>
+          <tr><td>&gt; 0.60</td><td>Very good</td></tr>
+        </tbody>
+      </table>
+      <p>These thresholds are our own, plausibly chosen boundaries, not officially adopted class boundaries.</p>
+    </section>
+
+    <section class="doc-section" id="deviations">
+      <h2>6. Deviations from the official methodology</h2>
+      <ol>
+        <li><strong>Unknown reference normalization values:</strong> the actual nationwide extreme values of the raster data for the respective year are used as a substitute.</li>
+        <li><strong>NDVI data source:</strong> the original paper uses Sentinel-2 (10 m resolution); the public dataset is based on MODIS (~250 m), which can cause deviations.</li>
+        <li><strong>Fallback mechanism:</strong> the nearest-valid-pixel fallback is our own addition, not described in the original, but necessary for practically usable postal code lookups.</li>
+        <li><strong>Class boundaries:</strong> our own plausible interpretation (see Section 5).</li>
+        <li><strong>Time period:</strong> 2018–2024 (available dataset) instead of 2021–2025 (official 2026 publication).</li>
+      </ol>
+      <p><strong>Consequence:</strong> the displayed value may differ from a hypothetical official GFKI value for the same postal code. It should be understood as a plausible, methodologically traceable approximation, not an exact reproduction.</p>
+    </section>
+
+    <section class="doc-section" id="validation">
+      <h2>7. Validation / plausibility check</h2>
+      <p>The following samples were used for plausibility checking during development:</p>
+      <ul>
+        <li><strong>Karlsruhe (76133):</strong> GMCI ≈ 0.42–0.45 — densely built urban area, expected moderate value</li>
+        <li><strong>Feldberg/Black Forest (79868):</strong> GMCI ≈ 0.53–0.58 — natural landscape, expected higher than Karlsruhe</li>
+        <li><strong>Berlin-Mitte (10117):</strong> GMCI ≈ 0.34 — heavily sealed inner-city location, expected low</li>
+      </ul>
+      <p>The relative ranking of these test points matches expectations from the original study — an indication of basic plausibility, even without independent validation against official GFKI maps.</p>
+    </section>
+
+    <section class="doc-section" id="reproducibility">
+      <h2>8. Reproducibility</h2>
+      <p>The entire calculation is reproducible via the <code>precompute_gmci.py</code> script. Required: the 21 GeoTIFF files from Zenodo, the postal code coordinate table, and Python 3 with <code>rasterio</code> and <code>numpy</code>:</p>
+      <pre><code>python3 precompute_gmci.py \
+  --csv plz_einwohner.csv \
+  --data-dir &lt;folder with GeoTIFFs&gt; \
+  --years 2018 2019 2020 2021 2022 2023 2024 \
+  --out gmci-daten.json</code></pre>
+    </section>
+
+    <section class="doc-section" id="licenses">
+      <h2>9. Licenses and attributions</h2>
+      <table>
+        <thead><tr><th>Source</th><th>License</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Adhikari et al. (2026), <em>Ecological Solutions and Evidence</em></td><td>CC-BY-4.0</td><td>Methodology basis</td></tr>
+          <tr><td>Raster dataset (Zenodo)</td><td>CC-BY-4.0</td><td>LST/NDVI/PPT raw data</td></tr>
+          <tr><td>plz_einwohner.csv (postleitzahl.net)</td><td>ODbL/CC-BY-SA</td><td>Postal code coordinates</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="divider"></div>
+    <p style="font-size:0.85rem; color:var(--text-subtle);">Version 1.0 (July 2026) — First publication alongside the launch of the Green-Moist-Cool Check. For methodology questions, see the <a href="/impressum.html" style="color:var(--green-mid);">legal notice</a>.</p>
+
+  </main>
+
+  <hlb-footer lang="en"></hlb-footer>
+
+</body>
+</html>
