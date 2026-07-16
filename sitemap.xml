@@ -38,7 +38,7 @@
   <!-- Blog-Übersicht DE -->
   <url>
     <loc>https://heinz-lindner-baum.de/blog/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/"/>
@@ -49,7 +49,7 @@
   <!-- Blog-Übersicht EN -->
   <url>
     <loc>https://heinz-lindner-baum.de/en/blog/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/"/>
@@ -60,12 +60,45 @@
   <!-- Blog-Übersicht ES -->
   <url>
     <loc>https://heinz-lindner-baum.de/es/blog/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/"/>
+  </url>
+
+  <!-- Artikel: Der Grün-Feucht-Kühl-Index 2026: Was er über einzelne Bä DE -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/blog/gruen-feucht-kuehl-index-2026.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/gruen-feucht-kuehl-index-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/green-moist-cool-index-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/indice-verde-humedo-fresco-2026.html"/>
+  </url>
+
+  <!-- Artikel: Der Grün-Feucht-Kühl-Index 2026: Was er über einzelne Bä EN -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/en/blog/green-moist-cool-index-2026.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/gruen-feucht-kuehl-index-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/green-moist-cool-index-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/indice-verde-humedo-fresco-2026.html"/>
+  </url>
+
+  <!-- Artikel: Der Grün-Feucht-Kühl-Index 2026: Was er über einzelne Bä ES -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/es/blog/indice-verde-humedo-fresco-2026.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/blog/gruen-feucht-kuehl-index-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/blog/green-moist-cool-index-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/indice-verde-humedo-fresco-2026.html"/>
   </url>
 
   <!-- Artikel: Fast eine Million Stadtbäume verschwunden – was das für  DE -->
