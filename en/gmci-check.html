@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green-Moist-Cool Check – The Heinz Lindner Tree</title>
+  <meta name="description" content="Check how green, moist and cool your surroundings are (German postal codes only) – an approximation of the scientific Green-Moist-Cool Index.">
+  <meta name="robots" content="index, follow">
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a3d2b">
+
+  <link rel="canonical" href="https://heinz-lindner-baum.de/en/gmci-check.html">
+  <link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-check.html">
+  <link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-check.html">
+  <link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-check.html">
+  <link rel="alternate" hreflang="x-default" href="https://heinz-lindner-baum.de/gmci-check.html">
+
+  <!-- Fonts locally hosted (no Google server contact = GDPR compliant) -->
+  <link rel="stylesheet" href="/fonts/fonts.css">
+
+  <!-- Cookie Consent & Web Components -->
+  <script src="/cookie-consent.js"></script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/gmci-check.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #0a3d2b;
+      --green-mid: #1D9E75;
+      --green-pale: #f0faf6;
+      --text: #1a1a1a;
+      --text-muted: #5a5a5a;
+      --text-subtle: #8a8a8a;
+      --border: rgba(0,0,0,0.08);
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.75;
+    }
+
+    .page-header {
+      background: var(--green-pale);
+      padding: 4rem 2rem 3rem;
+      border-bottom: 1px solid rgba(29,158,117,0.1);
+    }
+    .page-header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .page-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 500;
+      color: var(--green-dark);
+      line-height: 1.2;
+    }
+    .page-header .lead {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .context-section {
+      margin-top: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .context-section a {
+      color: var(--green-mid);
+      text-decoration: none;
+    }
+    .context-section a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--green-dark);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+    footer a:hover { color: rgba(255,255,255,0.9); }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.25rem 4rem; }
+      .page-header { padding: 3rem 1.25rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <hlb-nav lang="en"></hlb-nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="page-eyebrow">Interactive Tool</span>
+      <h1>Green-Moist-Cool Check</h1>
+      <p class="lead">How functional is the landscape at your German postal code? Enter a 5-digit German PLZ and get an approximation of the scientific Green-Moist-Cool Index (GMCI).</p>
+    </div>
+  </div>
+
+  <main>
+
+    <hlb-gmci-check lang="en"></hlb-gmci-check>
+
+    <div class="context-section">
+      <p><strong>Note:</strong> This tool relies on German postal code (PLZ) boundaries and is currently only available for locations within Germany. An international version is not available at this time.</p>
+      <p style="margin-top: 0.75rem;">The Green-Moist-Cool Index was introduced in 2026 by ECONICS Institute and NABU, using satellite data to measure how functional landscapes across Germany are — how well they mitigate heat, retain water, and buffer climate impacts. Read more about the background in our full article: <a href="/en/blog/green-moist-cool-index-2026.html">The Green-Moist-Cool Index and what it means for urban trees →</a></p>
+    </div>
+
+  </main>
+
+  <hlb-footer lang="en"></hlb-footer>
+
+</body>
+</html>
