@@ -88,7 +88,7 @@ class HlbFooter extends HTMLElement {
         hlb-footer .lang-switch .sep { color: rgba(255,255,255,0.15); font-size: 10px; }
       </style>
       <footer>
-        <div class="footer-line-1">Der Heinz-Lindner-Baum · Sequoiadendron giganteum</div>
+        <div class="footer-line-1">Der Heinz-Lindner-Baum · Sequoia sempervirens</div>
         <div class="footer-line-2">${t.location}</div>
         <div class="footer-links">
           <span>© ${year} heinz-lindner-baum.de</span>
