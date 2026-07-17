@@ -167,4 +167,70 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/blog/arboles-urbanos-costos-2025.html"/>
   </url>
 
+  <!-- Grün-Feucht-Kühl-Check – Der Heinz-Lindner-Baum -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/gmci-check.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-check.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-check.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-check.html"/>
+  </url>
+
+  <!-- Verificación Verde-Húmedo-Fresco – El Árbol Heinz Lindner -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/es/gmci-check.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-check.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-check.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-check.html"/>
+  </url>
+
+  <!-- Metodología: Verificación Verde-Húmedo-Fresco – El Árbol Heinz Lindner -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/es/gmci-methodik.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-methodik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-methodik.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-methodik.html"/>
+  </url>
+
+  <!-- Green-Moist-Cool Check – The Heinz Lindner Tree -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/en/gmci-check.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-check.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-check.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-check.html"/>
+  </url>
+
+  <!-- Methodology: Green-Moist-Cool Check – The Heinz Lindner Tree -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/en/gmci-methodik.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-methodik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-methodik.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-methodik.html"/>
+  </url>
+
+  <!-- Methodik: Grün-Feucht-Kühl-Check – Der Heinz-Lindner-Baum -->
+  <url>
+    <loc>https://heinz-lindner-baum.de/gmci-methodik.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://heinz-lindner-baum.de/gmci-methodik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heinz-lindner-baum.de/en/gmci-methodik.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heinz-lindner-baum.de/es/gmci-methodik.html"/>
+  </url>
+
 </urlset>
